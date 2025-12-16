@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anish Shrestha | Academic Profile</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="page">
+    <header>
+        <div class="masthead">
+            <div>
+                <div class="site-title">Anish Shrestha</div>
+                <div class="tagline">Doctoral Student · Computer Science · Data & AI</div>
+            </div>
+            <div class="header-right">
+                <div class="issue-info">
+<!--                    <div>Academic Edition</div>-->
+                    <div id="today"></div>
+                </div>
+                <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main content -->
+        <section>
+            <article class="feature" id="about">
+                <h1>Bridging Data, Systems, and Human Understanding</h1>
+                <div class="byline">Profile · Updated regularly</div>
+                <p>
+                    I am an early-career researcher focused on making complex data systems more accessible,
+                    interpretable, and efficient. My work sits at the intersection of databases, machine
+                    learning, and visualization, with the long-term goal of translating theoretical advances
+                    into tools that impact real-world decision making.
+                </p>
+                <p>
+                    I am currently exploring how <span class="highlight">interactive systems</span> and
+                    <span class="highlight">model efficiency</span> can reduce the barrier between humans and
+                    large-scale data, particularly for users outside traditional computer science domains.
+                </p>
+            </article>
+
+            <div class="columns">
+                <div class="column">
+                    <article id="research">
+                        <h2>Research Focus</h2>
+                        <p>
+                            My research investigates lightweight machine learning models, database optimization,
+                            and human-in-the-loop systems. I am especially interested in questions of scalability,
+                            interpretability, and responsible deployment of AI systems.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="column">
+                    <article id="publications">
+                        <h2>Recent Writing & Work</h2>
+                        <p>
+                            As a researcher just starting out, I focus on building strong foundations through
+                            workshop papers, technical reports, and open-source prototypes. Formal publications
+                            will be listed here as they appear.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="column">
+                    <article id="teaching">
+                        <h2>Teaching</h2>
+                        <p>
+                            I have served as a teaching assistant for courses in introductory programming,
+                            data structures, and database systems. I am passionate about making technical
+                            concepts accessible to students from diverse backgrounds.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <!-- Profile photo at top of sidebar -->
+            <div class="profile-photo">
+                <!-- Replace with your actual photo -->
+                <div class="placeholder">Your Photo</div>
+                <!-- <img src="images/your-photo.jpg" alt="Researcher's Name"> -->
+<!--                <div class="profile-name">Anish Shrestha</div>-->
+            </div>
+
+<!--            <div class="sidebar-section">-->
+<!--                <h3>Affiliation</h3>-->
+<!--                <ul>-->
+<!--                    <li>Department of Computer Science</li>-->
+<!--                    <li>[University Name]</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+            <div class="sidebar-section">
+                <h3>Education</h3>
+                <ul>
+                    <li><strong>M.S. Computer Science</strong>University of Massachusetts Lowell</li>
+                    <li><strong>B.S. Mechanical Engineering</strong>Minor in Mathematics<br>Louisiana Tech University</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Research Interests</h3>
+                <ul>
+                    <li>Machine Learning Efficiency</li>
+                    <li>Databases & Systems</li>
+                    <li>Visualization</li>
+                    <li>Human–AI Interaction</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Prospective Advisors</h3>
+                <ul>
+                    <li><a href="#">Dr. Michael Hughes</a><br><span class="advisor-note">Probabilistic Modeling, Efficient ML</span></li>
+                    <li><a href="#">Prof. Liping Liu</a><br><span class="advisor-note">Generative Models, Graph Learning</span></li>
+                    <li><a href="#">Prof. Hari Sundar</a><br><span class="advisor-note">Scalable & Parallel Algorithms</span></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section" id="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: shrestha.anish@outlook.com</li>
+                    <li><a href="#">Google Scholar</a></li>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">CV (PDF)</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div>© <span id="year"></span> Anish Shrestha</div>
+        <div>shrestha.anish@outlook.com</div>
+    </footer>
+</div>
+
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<!-- JavaScript -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>

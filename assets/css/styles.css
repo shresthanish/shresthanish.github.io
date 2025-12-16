@@ -1,0 +1,489 @@
+/* ==========================================================================
+   CSS Variables / Theme
+   ========================================================================== */
+
+:root {
+    --bg: #faf9f7;
+    --ink: #111;
+    --muted: #666;
+    --accent: #9b1c1c;
+    --rule: #ddd;
+}
+
+body.dark {
+    --bg: #1a1a1a;
+    --ink: #f0f0f0;
+    --muted: #aaa;
+    --accent: #e57373;
+    --rule: #333;
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Source Serif 4", serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 2rem 2rem 4rem;
+    }
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+    border-bottom: 3px solid var(--ink);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .masthead {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.site-title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+    .site-title {
+        font-size: 2.8rem;
+    }
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.issue-info {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+@media (min-width: 768px) {
+    .issue-info {
+        text-align: right;
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================================================
+   Theme Toggle
+   ========================================================================== */
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--rule);
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    #theme-toggle {
+        padding: 0.5rem 0.7rem;
+        font-size: 1.1rem;
+    }
+}
+
+#theme-toggle:hover {
+    background: var(--rule);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+nav {
+    margin-top: 1rem;
+    border-top: 1px solid var(--rule);
+    padding-top: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    nav {
+        gap: 1.5rem;
+    }
+}
+
+nav a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+    padding-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    nav a {
+        font-size: 0.9rem;
+    }
+}
+
+nav a.active {
+    color: var(--ink);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* ==========================================================================
+   Main Grid
+   ========================================================================== */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+    main {
+        grid-template-columns: 2.2fr 1fr;
+    }
+}
+
+/* ==========================================================================
+   Feature Article
+   ========================================================================== */
+
+.feature {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .feature h1 {
+        font-size: 2.2rem;
+    }
+}
+
+.byline {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* ==========================================================================
+   Content Columns
+   ========================================================================== */
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.column article {
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.column article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.column h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.column p {
+    font-size: 0.95rem;
+    text-align: justify-all;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+aside {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    aside {
+        border-left: 1px solid var(--rule);
+        padding-left: 1.5rem;
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+/* ==========================================================================
+   Profile Photo
+   ========================================================================== */
+
+.profile-photo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-photo img {
+    border: 3px solid var(--ink);
+    filter: grayscale(20%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.profile-photo img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* Photo shape: Circle (default) */
+.profile-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Photo shape: Square - uncomment to use
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+*/
+
+/* Photo shape: Rectangle - uncomment to use
+.profile-photo img {
+  width: 120px;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+*/
+
+.profile-photo .placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--rule);
+    color: var(--muted);
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.profile-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0.75rem;
+}
+
+/* ==========================================================================
+   Sidebar Sections
+   ========================================================================== */
+
+.sidebar-section {
+    margin-bottom: 1.5rem;
+    transition: background 0.2s ease;
+    padding: 0.75rem;
+    margin-left: -0.75rem;
+    border-radius: 4px;
+}
+
+.sidebar-section:hover {
+    background: rgba(128, 128, 128, 0.05);
+}
+
+.sidebar-section h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.sidebar-section li strong {
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+.advisor-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--ink);
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+.highlight {
+    background: #fff3cd;
+    padding: 0.2rem 0.35rem;
+    border-radius: 2px;
+}
+
+body.dark .highlight {
+    background: #5a4a00;
+}
+
+/* ==========================================================================
+   Scroll to Top Button
+   ========================================================================== */
+
+#scroll-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+    z-index: 100;
+}
+
+#scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scroll-top:hover {
+    transform: scale(1.1);
+}
